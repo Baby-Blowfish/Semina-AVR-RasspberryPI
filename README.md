@@ -19,8 +19,7 @@
             5. Socket communication between two Raspberry Pi devices, with the server and client using threads to handle simultaneous data transmission and reception; this enables real-time motor control commands to be sent from the client to the server, which then processes these commands to control the motor based on the exchanged data.
     
 ## 2. 세미나 개요 :
-   
-    ![contents](https://github.com/user-attachments/assets/8eb543d4-70f7-44fc-9c08-e052abbdee2e)
+![contents](https://github.com/user-attachments/assets/dfbb63d8-ba1d-4b39-902c-cedc45ea072a)
 
 
 ## 4. 프로젝트
