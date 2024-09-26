@@ -1,7 +1,7 @@
 # Semina-AVR-RasspberryPi (2021.12 ~ 2024.02)
 
-## 1. ¸ñÀû : AVR(MCU), Raspberry PI(SBC)¿¡ °üÇØ ¸ÅÁÖ ±â¼ú ¸ñÂ÷¿¡ µû¸¥ ¹ßÇ¥ ¹× ÇÁ·ÎÁ§Æ® ÁøÇà
-    ### ±â¼ú ¸ñÂ÷
+## 1. ëª©ì  : AVR(MCU), Raspberry PI(SBC)ì— ê´€í•´ ë§¤ì£¼ ê¸°ìˆ  ëª©ì°¨ì— ë”°ë¥¸ ë°œí‘œ ë° í”„ë¡œì íŠ¸ ì§„í–‰
+    ### ê¸°ìˆ  ëª©ì°¨
         -  ATmega128
             1. C language
             2. Controlling GPIO pins to interface with LEDs and switches
@@ -18,21 +18,21 @@
             4. useing threads to concurrently read ADC values from a NAU-7802 chip via I2C (utilizing a 12-bit Sigma-Delta ADC for temperature and humidity sensor readings) and control a servo motor based on these readings.
             5. Socket communication between two Raspberry Pi devices, with the server and client using threads to handle simultaneous data transmission and reception; this enables real-time motor control commands to be sent from the client to the server, which then processes these commands to control the motor based on the exchanged data.
     
-## 2. ¼¼¹Ì³ª °³¿ä :
-
+## 2. ì„¸ë¯¸ë‚˜ ê°œìš” :
    
-    
+    ![contents](https://github.com/user-attachments/assets/8eb543d4-70f7-44fc-9c08-e052abbdee2e)
 
-## 4. ÇÁ·ÎÁ§Æ®
 
-    ### ÀÚµ¿ ºí¶óÀÎµå ÇÁ·ÎÁ§Æ® (°³ÀÎ)
-        - ATmega128·Î Á¶µµ¼¾¼­ ¼¾¼­¸¦ ADCÇÏ¿© ÀÓ°è°ª¿¡ µû¸¥ Servo¸ğÅÍ Á¦¾î
-        - ³·°ú ¹ã¿¡ µû¶ó ÀÚµ¿ ºí¶óÀÎµå
-    ### ·Îº¿ÆÈ ÇÁ·ÎÁ§Æ® (°³ÀÎ)
-        - ATmega128·Î °¡º¯ÀúÇ× 5°³ÀÇ ADC °ª¿¡ µû¶ó µ¿ÀÛÇÏ´Â 5°üÀı Manipulator Á¦¾î
-        - °¡º¯ÀúÇ×ÀÇ Àü¾Ğ°ª¿¡ µû¶ó ·Îº¿ÆÈÀÇ °üÀıÀ» ±¸¼ºÇÏ´Â ¼­º¸¸ğÅÍ Á¦¾î
-    ### Bluetooth ¹«¼± RCÄ« ÇÁ·ÎÁ§Æ® (ÆÀ)
-        - ATmega128ÀÇ Bluetootn ¸ğµâÀ» ÅëÇØ PC¿Í ¿¬°á ÈÄ Å°º¸µå ¸í·ÉÀ¸·Î RCÄ«ÀÇ Àü/ÈÄ/ÁÂ/¿ì Á¦¾î°ª ¼Û¼ö½Å
-        - 3°³ÀÇ Àû¿Ü¼± ¼¾¼­ °ªÀ» Ã³¸®ÇÏ¿© ¶óÀÎÀ» µû¶ó ¿òÁ÷ÀÌ´Â 4WD DC¸ğÅÍ Á¦¾î ¾Ë°í¸®Áò °³¹ß
-        - ÃÊÀ½ÆÄ ¼¾¼­¸¦ ÅëÇÑ ÈÄ¹æ °Å¸® ÃøÁ¤ ½Ã½ºÅÛ °³¹ß
+## 4. í”„ë¡œì íŠ¸
+
+    ### ìë™ ë¸”ë¼ì¸ë“œ í”„ë¡œì íŠ¸ (ê°œì¸)
+        - ATmega128ë¡œ ì¡°ë„ì„¼ì„œ ì„¼ì„œë¥¼ ADCí•˜ì—¬ ì„ê³„ê°’ì— ë”°ë¥¸ Servoëª¨í„° ì œì–´
+        - ë‚®ê³¼ ë°¤ì— ë”°ë¼ ìë™ ë¸”ë¼ì¸ë“œ
+    ### ë¡œë´‡íŒ” í”„ë¡œì íŠ¸ (ê°œì¸)
+        - ATmega128ë¡œ ê°€ë³€ì €í•­ 5ê°œì˜ ADC ê°’ì— ë”°ë¼ ë™ì‘í•˜ëŠ” 5ê´€ì ˆ Manipulator ì œì–´
+        - ê°€ë³€ì €í•­ì˜ ì „ì••ê°’ì— ë”°ë¼ ë¡œë´‡íŒ”ì˜ ê´€ì ˆì„ êµ¬ì„±í•˜ëŠ” ì„œë³´ëª¨í„° ì œì–´
+    ### Bluetooth ë¬´ì„  RCì¹´ í”„ë¡œì íŠ¸ (íŒ€)
+        - ATmega128ì˜ Bluetootn ëª¨ë“ˆì„ í†µí•´ PCì™€ ì—°ê²° í›„ í‚¤ë³´ë“œ ëª…ë ¹ìœ¼ë¡œ RCì¹´ì˜ ì „/í›„/ì¢Œ/ìš° ì œì–´ê°’ ì†¡ìˆ˜ì‹ 
+        - 3ê°œì˜ ì ì™¸ì„  ì„¼ì„œ ê°’ì„ ì²˜ë¦¬í•˜ì—¬ ë¼ì¸ì„ ë”°ë¼ ì›€ì§ì´ëŠ” 4WD DCëª¨í„° ì œì–´ ì•Œê³ ë¦¬ì¦˜ ê°œë°œ
+        - ì´ˆìŒíŒŒ ì„¼ì„œë¥¼ í†µí•œ í›„ë°© ê±°ë¦¬ ì¸¡ì • ì‹œìŠ¤í…œ ê°œë°œ
 
