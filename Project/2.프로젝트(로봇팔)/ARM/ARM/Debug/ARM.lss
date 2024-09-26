@@ -1,0 +1,417 @@
+
+ARM.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  000002d4  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000280  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  000002d4  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000304  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000048  00000000  00000000  00000344  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000b68  00000000  00000000  0000038c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000905  00000000  00000000  00000ef4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000446  00000000  00000000  000017f9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  0000008c  00000000  00000000  00001c40  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000049f  00000000  00000000  00001ccc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000002ba  00000000  00000000  0000216b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000038  00000000  00000000  00002425  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	53 c0       	rjmp	.+166    	; 0xac <__bad_interrupt>
+   6:	00 00       	nop
+   8:	51 c0       	rjmp	.+162    	; 0xac <__bad_interrupt>
+   a:	00 00       	nop
+   c:	4f c0       	rjmp	.+158    	; 0xac <__bad_interrupt>
+   e:	00 00       	nop
+  10:	4d c0       	rjmp	.+154    	; 0xac <__bad_interrupt>
+  12:	00 00       	nop
+  14:	4b c0       	rjmp	.+150    	; 0xac <__bad_interrupt>
+  16:	00 00       	nop
+  18:	49 c0       	rjmp	.+146    	; 0xac <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	47 c0       	rjmp	.+142    	; 0xac <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	45 c0       	rjmp	.+138    	; 0xac <__bad_interrupt>
+  22:	00 00       	nop
+  24:	43 c0       	rjmp	.+134    	; 0xac <__bad_interrupt>
+  26:	00 00       	nop
+  28:	41 c0       	rjmp	.+130    	; 0xac <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	3f c0       	rjmp	.+126    	; 0xac <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	3d c0       	rjmp	.+122    	; 0xac <__bad_interrupt>
+  32:	00 00       	nop
+  34:	3b c0       	rjmp	.+118    	; 0xac <__bad_interrupt>
+  36:	00 00       	nop
+  38:	39 c0       	rjmp	.+114    	; 0xac <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	37 c0       	rjmp	.+110    	; 0xac <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	35 c0       	rjmp	.+106    	; 0xac <__bad_interrupt>
+  42:	00 00       	nop
+  44:	33 c0       	rjmp	.+102    	; 0xac <__bad_interrupt>
+  46:	00 00       	nop
+  48:	31 c0       	rjmp	.+98     	; 0xac <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	2f c0       	rjmp	.+94     	; 0xac <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	2d c0       	rjmp	.+90     	; 0xac <__bad_interrupt>
+  52:	00 00       	nop
+  54:	2b c0       	rjmp	.+86     	; 0xac <__bad_interrupt>
+  56:	00 00       	nop
+  58:	29 c0       	rjmp	.+82     	; 0xac <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	27 c0       	rjmp	.+78     	; 0xac <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	25 c0       	rjmp	.+74     	; 0xac <__bad_interrupt>
+  62:	00 00       	nop
+  64:	23 c0       	rjmp	.+70     	; 0xac <__bad_interrupt>
+  66:	00 00       	nop
+  68:	21 c0       	rjmp	.+66     	; 0xac <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	1f c0       	rjmp	.+62     	; 0xac <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	1d c0       	rjmp	.+58     	; 0xac <__bad_interrupt>
+  72:	00 00       	nop
+  74:	1b c0       	rjmp	.+54     	; 0xac <__bad_interrupt>
+  76:	00 00       	nop
+  78:	19 c0       	rjmp	.+50     	; 0xac <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	17 c0       	rjmp	.+46     	; 0xac <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	15 c0       	rjmp	.+42     	; 0xac <__bad_interrupt>
+  82:	00 00       	nop
+  84:	13 c0       	rjmp	.+38     	; 0xac <__bad_interrupt>
+  86:	00 00       	nop
+  88:	11 c0       	rjmp	.+34     	; 0xac <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_clear_bss>:
+  98:	21 e0       	ldi	r18, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	01 c0       	rjmp	.+2      	; 0xa2 <.do_clear_bss_start>
+
+000000a0 <.do_clear_bss_loop>:
+  a0:	1d 92       	st	X+, r1
+
+000000a2 <.do_clear_bss_start>:
+  a2:	a0 30       	cpi	r26, 0x00	; 0
+  a4:	b2 07       	cpc	r27, r18
+  a6:	e1 f7       	brne	.-8      	; 0xa0 <.do_clear_bss_loop>
+  a8:	3a d0       	rcall	.+116    	; 0x11e <main>
+  aa:	e8 c0       	rjmp	.+464    	; 0x27c <_exit>
+
+000000ac <__bad_interrupt>:
+  ac:	a9 cf       	rjmp	.-174    	; 0x0 <__vectors>
+
+000000ae <serial_init>:
+{
+	static int average = 0,FILTERDATA=0;
+	++FILTERDATA;
+	average = (((FILTERDATA-1)*average)/FILTERDATA) + (x/FILTERDATA);
+	return average;
+}
+  ae:	dc 01       	movw	r26, r24
+  b0:	cb 01       	movw	r24, r22
+  b2:	88 0f       	add	r24, r24
+  b4:	99 1f       	adc	r25, r25
+  b6:	aa 1f       	adc	r26, r26
+  b8:	bb 1f       	adc	r27, r27
+  ba:	88 0f       	add	r24, r24
+  bc:	99 1f       	adc	r25, r25
+  be:	aa 1f       	adc	r26, r26
+  c0:	bb 1f       	adc	r27, r27
+  c2:	9c 01       	movw	r18, r24
+  c4:	ad 01       	movw	r20, r26
+  c6:	22 0f       	add	r18, r18
+  c8:	33 1f       	adc	r19, r19
+  ca:	44 1f       	adc	r20, r20
+  cc:	55 1f       	adc	r21, r21
+  ce:	22 0f       	add	r18, r18
+  d0:	33 1f       	adc	r19, r19
+  d2:	44 1f       	adc	r20, r20
+  d4:	55 1f       	adc	r21, r21
+  d6:	60 e0       	ldi	r22, 0x00	; 0
+  d8:	70 e8       	ldi	r23, 0x80	; 128
+  da:	80 e7       	ldi	r24, 0x70	; 112
+  dc:	90 e0       	ldi	r25, 0x00	; 0
+  de:	ac d0       	rcall	.+344    	; 0x238 <__udivmodsi4>
+  e0:	21 50       	subi	r18, 0x01	; 1
+  e2:	31 09       	sbc	r19, r1
+  e4:	30 93 90 00 	sts	0x0090, r19	; 0x800090 <__TEXT_REGION_LENGTH__+0x7e0090>
+  e8:	29 b9       	out	0x09, r18	; 9
+  ea:	88 e1       	ldi	r24, 0x18	; 24
+  ec:	8a b9       	out	0x0a, r24	; 10
+  ee:	86 e0       	ldi	r24, 0x06	; 6
+  f0:	80 93 95 00 	sts	0x0095, r24	; 0x800095 <__TEXT_REGION_LENGTH__+0x7e0095>
+  f4:	08 95       	ret
+
+000000f6 <get_ADC>:
+  f6:	96 e8       	ldi	r25, 0x86	; 134
+  f8:	96 b9       	out	0x06, r25	; 6
+  fa:	80 64       	ori	r24, 0x40	; 64
+  fc:	87 b9       	out	0x07, r24	; 7
+  fe:	86 b1       	in	r24, 0x06	; 6
+ 100:	80 64       	ori	r24, 0x40	; 64
+ 102:	86 b9       	out	0x06, r24	; 6
+ 104:	34 9b       	sbis	0x06, 4	; 6
+ 106:	fe cf       	rjmp	.-4      	; 0x104 <get_ADC+0xe>
+ 108:	24 b1       	in	r18, 0x04	; 4
+ 10a:	35 b1       	in	r19, 0x05	; 5
+ 10c:	96 b1       	in	r25, 0x06	; 6
+ 10e:	90 61       	ori	r25, 0x10	; 16
+ 110:	96 b9       	out	0x06, r25	; 6
+ 112:	c9 01       	movw	r24, r18
+ 114:	96 95       	lsr	r25
+ 116:	87 95       	ror	r24
+ 118:	96 95       	lsr	r25
+ 11a:	87 95       	ror	r24
+ 11c:	08 95       	ret
+
+0000011e <main>:
+
+int main(void)
+{
+	unsigned int adc_value=0;
+	TCCR1A=0xaa;	//0b10101010  비교 일치 될때 OCnX 핀 0, TOP에서 1	출력
+ 11e:	5a ea       	ldi	r21, 0xAA	; 170
+ 120:	5f bd       	out	0x2f, r21	; 47
+	TCCR1B=0x1A;	//0b00011010  TOP값을 ICRn으로 하는 FAST PWM모드 설정, 분주비 8
+ 122:	4a e1       	ldi	r20, 0x1A	; 26
+ 124:	4e bd       	out	0x2e, r20	; 46
+	ICR1=18431;  	// 주기 20msec 로 하는 카운터값 18431 TOP값으로 사용
+ 126:	2f ef       	ldi	r18, 0xFF	; 255
+ 128:	37 e4       	ldi	r19, 0x47	; 71
+ 12a:	37 bd       	out	0x27, r19	; 39
+ 12c:	26 bd       	out	0x26, r18	; 38
+	OCR1A=645;		//서보모터 초기값 0도
+ 12e:	85 e8       	ldi	r24, 0x85	; 133
+ 130:	92 e0       	ldi	r25, 0x02	; 2
+ 132:	9b bd       	out	0x2b, r25	; 43
+ 134:	8a bd       	out	0x2a, r24	; 42
+	OCR1B=645;		//서보모터 초기값 0도
+ 136:	99 bd       	out	0x29, r25	; 41
+ 138:	88 bd       	out	0x28, r24	; 40
+	
+	
+	TCCR3A=0xaa;	//0b10101010  비교 일치 될때 OCnX 핀 0, TOP에서 1	출력
+ 13a:	50 93 8b 00 	sts	0x008B, r21	; 0x80008b <__TEXT_REGION_LENGTH__+0x7e008b>
+	TCCR3B=0x1A;	//0b00011010  TOP값을 ICRn으로 하는 FAST PWM모드 설정, 분주비 8
+ 13e:	40 93 8a 00 	sts	0x008A, r20	; 0x80008a <__TEXT_REGION_LENGTH__+0x7e008a>
+	ICR3=18431;  	// 주기 20msec 로 하는 카운터값 18431 TOP값으로 사용
+ 142:	30 93 81 00 	sts	0x0081, r19	; 0x800081 <__TEXT_REGION_LENGTH__+0x7e0081>
+ 146:	20 93 80 00 	sts	0x0080, r18	; 0x800080 <__TEXT_REGION_LENGTH__+0x7e0080>
+	OCR3A=645;		//서보모터 초기값 0도
+ 14a:	90 93 87 00 	sts	0x0087, r25	; 0x800087 <__TEXT_REGION_LENGTH__+0x7e0087>
+ 14e:	80 93 86 00 	sts	0x0086, r24	; 0x800086 <__TEXT_REGION_LENGTH__+0x7e0086>
+	OCR3B=645;		//서보모터 초기값 0도
+ 152:	90 93 85 00 	sts	0x0085, r25	; 0x800085 <__TEXT_REGION_LENGTH__+0x7e0085>
+ 156:	80 93 84 00 	sts	0x0084, r24	; 0x800084 <__TEXT_REGION_LENGTH__+0x7e0084>
+	OCR3C=645;
+ 15a:	90 93 83 00 	sts	0x0083, r25	; 0x800083 <__TEXT_REGION_LENGTH__+0x7e0083>
+ 15e:	80 93 82 00 	sts	0x0082, r24	; 0x800082 <__TEXT_REGION_LENGTH__+0x7e0082>
+	
+	DDRB=0xff; 	//B포트 5 서보모터 출력
+ 162:	8f ef       	ldi	r24, 0xFF	; 255
+ 164:	87 bb       	out	0x17, r24	; 23
+	DDRE=0xff;
+ 166:	82 b9       	out	0x02, r24	; 2
+	
+	serial_init(9600);
+ 168:	60 e8       	ldi	r22, 0x80	; 128
+ 16a:	75 e2       	ldi	r23, 0x25	; 37
+ 16c:	80 e0       	ldi	r24, 0x00	; 0
+ 16e:	90 e0       	ldi	r25, 0x00	; 0
+ 170:	9e df       	rcall	.-196    	; 0xae <serial_init>
+	while (1)
+	{
+		
+		
+		adc_value=get_ADC(0x00); //채널 ch번의 ADC값을 adc_value에 저장
+ 172:	80 e0       	ldi	r24, 0x00	; 0
+ 174:	c0 df       	rcall	.-128    	; 0xf6 <get_ADC>
+		OCR3A=600+5*adc_value;
+ 176:	9c 01       	movw	r18, r24
+ 178:	22 0f       	add	r18, r18
+ 17a:	33 1f       	adc	r19, r19
+ 17c:	22 0f       	add	r18, r18
+ 17e:	33 1f       	adc	r19, r19
+ 180:	82 0f       	add	r24, r18
+ 182:	93 1f       	adc	r25, r19
+ 184:	88 5a       	subi	r24, 0xA8	; 168
+ 186:	9d 4f       	sbci	r25, 0xFD	; 253
+ 188:	90 93 87 00 	sts	0x0087, r25	; 0x800087 <__TEXT_REGION_LENGTH__+0x7e0087>
+ 18c:	80 93 86 00 	sts	0x0086, r24	; 0x800086 <__TEXT_REGION_LENGTH__+0x7e0086>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 190:	8c ec       	ldi	r24, 0xCC	; 204
+ 192:	9c e1       	ldi	r25, 0x1C	; 28
+ 194:	01 97       	sbiw	r24, 0x01	; 1
+ 196:	f1 f7       	brne	.-4      	; 0x194 <main+0x76>
+ 198:	00 c0       	rjmp	.+0      	; 0x19a <main+0x7c>
+		_delay_ms(4);
+		
+		adc_value=get_ADC(0x01); //채널 ch번의 ADC값을 adc_value에 저장
+ 19a:	00 00       	nop
+ 19c:	81 e0       	ldi	r24, 0x01	; 1
+ 19e:	ab df       	rcall	.-170    	; 0xf6 <get_ADC>
+		OCR3B=500+6*adc_value;
+ 1a0:	9c 01       	movw	r18, r24
+ 1a2:	22 0f       	add	r18, r18
+ 1a4:	33 1f       	adc	r19, r19
+ 1a6:	82 0f       	add	r24, r18
+ 1a8:	93 1f       	adc	r25, r19
+ 1aa:	88 0f       	add	r24, r24
+ 1ac:	99 1f       	adc	r25, r25
+ 1ae:	8c 50       	subi	r24, 0x0C	; 12
+ 1b0:	9e 4f       	sbci	r25, 0xFE	; 254
+ 1b2:	90 93 85 00 	sts	0x0085, r25	; 0x800085 <__TEXT_REGION_LENGTH__+0x7e0085>
+ 1b6:	80 93 84 00 	sts	0x0084, r24	; 0x800084 <__TEXT_REGION_LENGTH__+0x7e0084>
+ 1ba:	8c ec       	ldi	r24, 0xCC	; 204
+ 1bc:	9c e1       	ldi	r25, 0x1C	; 28
+ 1be:	01 97       	sbiw	r24, 0x01	; 1
+ 1c0:	f1 f7       	brne	.-4      	; 0x1be <main+0xa0>
+ 1c2:	00 c0       	rjmp	.+0      	; 0x1c4 <main+0xa6>
+		_delay_ms(4);
+		
+		adc_value=get_ADC(0x02); //채널 ch번의 ADC값을 adc_value에 저장
+ 1c4:	00 00       	nop
+ 1c6:	82 e0       	ldi	r24, 0x02	; 2
+ 1c8:	96 df       	rcall	.-212    	; 0xf6 <get_ADC>
+		OCR3C=500+4*adc_value;
+ 1ca:	83 58       	subi	r24, 0x83	; 131
+ 1cc:	9f 4f       	sbci	r25, 0xFF	; 255
+ 1ce:	88 0f       	add	r24, r24
+ 1d0:	99 1f       	adc	r25, r25
+ 1d2:	88 0f       	add	r24, r24
+ 1d4:	99 1f       	adc	r25, r25
+ 1d6:	90 93 83 00 	sts	0x0083, r25	; 0x800083 <__TEXT_REGION_LENGTH__+0x7e0083>
+ 1da:	80 93 82 00 	sts	0x0082, r24	; 0x800082 <__TEXT_REGION_LENGTH__+0x7e0082>
+ 1de:	8c ec       	ldi	r24, 0xCC	; 204
+ 1e0:	9c e1       	ldi	r25, 0x1C	; 28
+ 1e2:	01 97       	sbiw	r24, 0x01	; 1
+ 1e4:	f1 f7       	brne	.-4      	; 0x1e2 <main+0xc4>
+ 1e6:	00 c0       	rjmp	.+0      	; 0x1e8 <main+0xca>
+		_delay_ms(4);
+		
+		adc_value=get_ADC(0x03); //채널 ch번의 ADC값을 adc_value에 저장
+ 1e8:	00 00       	nop
+ 1ea:	83 e0       	ldi	r24, 0x03	; 3
+ 1ec:	84 df       	rcall	.-248    	; 0xf6 <get_ADC>
+		OCR1A=500+5*adc_value;
+ 1ee:	9c 01       	movw	r18, r24
+ 1f0:	22 0f       	add	r18, r18
+ 1f2:	33 1f       	adc	r19, r19
+ 1f4:	22 0f       	add	r18, r18
+ 1f6:	33 1f       	adc	r19, r19
+ 1f8:	82 0f       	add	r24, r18
+ 1fa:	93 1f       	adc	r25, r19
+ 1fc:	8c 50       	subi	r24, 0x0C	; 12
+ 1fe:	9e 4f       	sbci	r25, 0xFE	; 254
+ 200:	9b bd       	out	0x2b, r25	; 43
+ 202:	8a bd       	out	0x2a, r24	; 42
+ 204:	8c ec       	ldi	r24, 0xCC	; 204
+ 206:	9c e1       	ldi	r25, 0x1C	; 28
+ 208:	01 97       	sbiw	r24, 0x01	; 1
+ 20a:	f1 f7       	brne	.-4      	; 0x208 <main+0xea>
+ 20c:	00 c0       	rjmp	.+0      	; 0x20e <main+0xf0>
+		_delay_ms(4);
+		
+		adc_value=get_ADC(0x04); //채널 ch번의 ADC값을 adc_value에 저장
+ 20e:	00 00       	nop
+ 210:	84 e0       	ldi	r24, 0x04	; 4
+ 212:	71 df       	rcall	.-286    	; 0xf6 <get_ADC>
+		OCR1B=500+6*adc_value;
+ 214:	9c 01       	movw	r18, r24
+ 216:	22 0f       	add	r18, r18
+ 218:	33 1f       	adc	r19, r19
+ 21a:	82 0f       	add	r24, r18
+ 21c:	93 1f       	adc	r25, r19
+ 21e:	88 0f       	add	r24, r24
+ 220:	99 1f       	adc	r25, r25
+ 222:	8c 50       	subi	r24, 0x0C	; 12
+ 224:	9e 4f       	sbci	r25, 0xFE	; 254
+ 226:	99 bd       	out	0x29, r25	; 41
+ 228:	88 bd       	out	0x28, r24	; 40
+ 22a:	8c ec       	ldi	r24, 0xCC	; 204
+ 22c:	9c e1       	ldi	r25, 0x1C	; 28
+ 22e:	01 97       	sbiw	r24, 0x01	; 1
+ 230:	f1 f7       	brne	.-4      	; 0x22e <main+0x110>
+ 232:	00 c0       	rjmp	.+0      	; 0x234 <main+0x116>
+ 234:	00 00       	nop
+ 236:	9d cf       	rjmp	.-198    	; 0x172 <main+0x54>
+
+00000238 <__udivmodsi4>:
+ 238:	a1 e2       	ldi	r26, 0x21	; 33
+ 23a:	1a 2e       	mov	r1, r26
+ 23c:	aa 1b       	sub	r26, r26
+ 23e:	bb 1b       	sub	r27, r27
+ 240:	fd 01       	movw	r30, r26
+ 242:	0d c0       	rjmp	.+26     	; 0x25e <__udivmodsi4_ep>
+
+00000244 <__udivmodsi4_loop>:
+ 244:	aa 1f       	adc	r26, r26
+ 246:	bb 1f       	adc	r27, r27
+ 248:	ee 1f       	adc	r30, r30
+ 24a:	ff 1f       	adc	r31, r31
+ 24c:	a2 17       	cp	r26, r18
+ 24e:	b3 07       	cpc	r27, r19
+ 250:	e4 07       	cpc	r30, r20
+ 252:	f5 07       	cpc	r31, r21
+ 254:	20 f0       	brcs	.+8      	; 0x25e <__udivmodsi4_ep>
+ 256:	a2 1b       	sub	r26, r18
+ 258:	b3 0b       	sbc	r27, r19
+ 25a:	e4 0b       	sbc	r30, r20
+ 25c:	f5 0b       	sbc	r31, r21
+
+0000025e <__udivmodsi4_ep>:
+ 25e:	66 1f       	adc	r22, r22
+ 260:	77 1f       	adc	r23, r23
+ 262:	88 1f       	adc	r24, r24
+ 264:	99 1f       	adc	r25, r25
+ 266:	1a 94       	dec	r1
+ 268:	69 f7       	brne	.-38     	; 0x244 <__udivmodsi4_loop>
+ 26a:	60 95       	com	r22
+ 26c:	70 95       	com	r23
+ 26e:	80 95       	com	r24
+ 270:	90 95       	com	r25
+ 272:	9b 01       	movw	r18, r22
+ 274:	ac 01       	movw	r20, r24
+ 276:	bd 01       	movw	r22, r26
+ 278:	cf 01       	movw	r24, r30
+ 27a:	08 95       	ret
+
+0000027c <_exit>:
+ 27c:	f8 94       	cli
+
+0000027e <__stop_program>:
+ 27e:	ff cf       	rjmp	.-2      	; 0x27e <__stop_program>

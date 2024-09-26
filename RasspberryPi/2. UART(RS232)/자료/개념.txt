@@ -1,0 +1,45 @@
+
+int fd=0;
+if((fd = serialOpen("/dev/ttyAMA0", 9600)) < 0)//int serialOpen(char *device,int baud)
+	{
+		fprintf(stderr, "unable to open serial device: %s\n", stderror(errno));//라즈벨파이에서 표준출력(모니터)
+		                                 // 표준에러스트림(모니터) 에러넘버 errno를 %s로 출력해라
+		return 1;
+	} // 포트 열기 /dec/ttyAMA0= serail device 이름 9600 보레이트(serail 속도) 일반적 115200 1초당 115200비트 송수신
+	  // 통시기기간 통신속도는 같아야한다.
+	  // fd=파일 디스크립터(serialOpen의 소프트웨어 출입구 리턴값)
+	  // serialOpen 에러가 있을 경우 -1을 넘겨준다	  
+	  // file descriptor 프로세스가 시스템으로부터 할당 받은 파일에 접근하는 추상적인 값=0이아닌 정수 값
+	  // 프로세스에서 열린 파일의 목록을 관리하는 테이블의 인덱스
+	char data = 0;
+	data = serialGetchar(fd); //int serialGetchar(int fd)=오픈한 시리얼포트에서 fd출입구로부터 한바이트를 받아서 리턴해줌
+							  //fd로부터 8비트를 받아서 data에 저장
+	printf("%c", (char)data);//문자 출력
+	
+	serialPutchar(fd, data);//void serialPutchar(int fd,unsigned char c)=지정된 파일 디스크립터에 식별되는 시리얼 장치에
+	                        //한바이트를 전송 
+							// fd 출입구로 8비트 data 문자 출력
+	serialPuts(fd, "\r\n"); // void serialPuts(int fd,char *s); 지정된 fd에 식별되는 시리얼장치에 문자열 전송함수
+							// void serialPrintf(int fd,char *message, ...);
+							// 지정된 fd에 문자를 나타내는 함수
+	serialFlush(fd) //void serialFlush(int fd)=수신된 모든 데이터를 삭제하는 함수 
+					//fflush(stdout) 출력버퍼를 지우는 명령어
+					// fflush(stdin) 입력버퍼를 지우는 명령어  호환성 안좋음 (os따라)
+	
+	serialClose(fd) // void serialClose(int fd); 오픈했던 시리얼 포트 닫기
+	if(serialDataAvail(fd) > 0) // void serialDattaAvail(int fd)=Rx에 데이터가 들어오는 확인하는 함수 
+								// 데이터가 들어오면>0 오류는 -1을 리턴
+								
+	// 리눅스에서 파일 저수준 입출력 형태 모든것을 파일로 생각함
+	// fd=open("test.txt",O_RDWR);
+	// read(fd,buffer,개수); buffer=8bit 버퍼
+	// write(fd, buffer, 개수); 
+	// Close(fd);
+	
+#include <stdio.h>
+#include <string.h>
+#include <errno.h>
+#include<wiringPi.h>
+#include<wiringSerial.h>
+#include<stdlib.h>
+https://m.blog.naver.com/emperonics/222039301356

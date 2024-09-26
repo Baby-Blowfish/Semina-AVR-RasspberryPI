@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\user\Desktop\마프 세미나\1.c언어\c언어 세미나\main.c(10,15): warning C4101: 'b' :참조되지 않은 지역 변수입니다.
+C:\Users\user\Desktop\마프 세미나\1.c언어\c언어 세미나\main.c(10,18): warning C4101: 'c' :참조되지 않은 지역 변수입니다.
+  c언어 세미나.vcxproj -> C:\Users\user\Desktop\마프 세미나\1.c언어\Debug\c언어 세미나.exe

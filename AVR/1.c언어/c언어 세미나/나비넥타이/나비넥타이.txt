@@ -1,0 +1,90 @@
+#include <stdio.h>
+int main(void) {
+		
+	int i, j, size, h_size;
+
+	while (1)
+	{
+		printf("나비넥타이의 크기를 입력하시오 : ");
+		scanf("%d", &size);
+
+		// 짝수와 홀수의 모양이 다르므로 둘의 경우를 나눔
+		if (size % 2 == 0)					     // 크기가 짝수인 경우(위에 아래로 나눔) 
+
+		{
+			h_size = size / 2;                   // 위, 아래의 각각의 루프횟수
+
+			for (i = 1; i <= h_size; i++)        // 위에부분 루프시작
+			{
+				for (j = 0; j < i; j++)          // i번쨰행의 처음부분의 * 생성
+					printf("*");
+				for (j = h_size; i < j; j--)     // 세로로 반나눴을때 앞쪽 공백
+					printf(" ");
+				for (j = h_size; i < j; j--)     // 세로로 반나눴을때 뒷쪽 공백
+					printf(" ");
+				for (j = 0; j < i; j++)          // i번쨰행의 마지막부분의 *생성
+					printf("*");
+				printf("\n");                    // 한 행 완성후 줄바꿔줘야됨
+			}
+
+			for (i = 1; i <= h_size; i++)        // 아래부분 루프시작   
+			{
+				for (j = h_size; i <= j; j--)    // h_size+1번쨰 행의 처음부분 *생성
+					printf("*");
+				for (j = 0; j < i - 1; j++)      // 세로로 반나눴을때 앞쪽 공백
+					printf(" ");
+				for (j = 0; j < i - 1; j++)      // 세로로 반나눴을때 뒷쪽 공백
+					printf(" ");
+				for (j = h_size; i <= j; j--)    // h_size+1번쨰행의 마지막부분의 *생성
+					printf("*");
+				printf("\n");                    // 한 행 완성후 줄바꿔줘야됨
+			}
+		}
+		else if (size != 1)// 크기가 1이아닌 홀수인 경우(위에 중간 아래로 나눔)
+		{
+			h_size = size / 2;                   // 위,아래 부분의 반복횟수
+
+			for (i = 1; i <= h_size; i++)        // 위에부분 루프시작
+			{
+				for (j = 0; j < i; j++)          // i번쨰행의 처음부분의 * 생성
+					printf("*");
+				for (j = h_size; i < j; j--)     // 세로로 반나눴을때 앞쪽 공백
+					printf(" ");
+
+				printf(" ");                     // 중간공백
+
+				for (j = h_size; i < j; j--)     // 세로로 반나눴을때 뒷쪽 공백
+					printf(" ");
+				for (j = 0; j < i; j++)          // i번쨰행의 마지막부분의 *생성
+					printf("*");
+				printf("\n");                    // 한 행 완성후 줄바꿔줘야됨
+			}
+
+			for (i = 0; i < size; i++)         // 중간부분 *생성
+			{
+				printf("*");
+			}
+			printf("\n");                       // 다음행위해 줄바꿈
+
+			for (i = 1; i <= h_size; i++)        // 아래부분 루프시작   
+			{
+				for (j = h_size; i <= j; j--)    // h_size+1번쨰 행의 처음부분 *생성
+					printf("*");
+				for (j = 0; j < i - 1; j++)      // 세로로 반나눴을때 앞쪽 공백
+					printf(" ");
+
+				printf(" ");                     // 중간공백
+
+				for (j = 0; j < i - 1; j++)      // 세로로 반나눴을때 뒷쪽 공백
+					printf(" ");
+				for (j = h_size; i <= j; j--)    // h_size+1번쨰행의 마지막부분의 *생성
+					printf("*");
+				printf("\n");                    // 한 행 완성후 줄바꿔줘야됨
+			}
+
+
+		}
+		else printf("*\n");                         // size가 1일때
+	}
+	return 0;
+}

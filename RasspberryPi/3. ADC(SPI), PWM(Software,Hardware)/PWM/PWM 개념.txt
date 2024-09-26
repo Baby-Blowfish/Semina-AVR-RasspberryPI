@@ -1,0 +1,62 @@
+## hardware pwm function
+void pinMode(int pin , int mode)
+	pin : wiringPi 핀번호(BCM번호 아님)
+	mode : PWM_OUTPUT pwm 출력 지원
+- 하드웨어 pwm핀 번호는 채널2개 핀 4개 
+  BCM기준 gpio18(pwm0),gpio12(pwm0),gpio13(pwm1),gpio19(pwm1)
+- main 프로그램에 관계없이 계속 출력함
+
+pwmSetMode(int mode);
+	mode : PWM_MODE_MS(mark:space mode), PWM_MODE_BAL(balanced mode)
+- 위의 함수로 모드 변경 가능 WiringPi는 defalut값이 Balanced 모드임
+- mark space 사이클 시작부터 듀티비율 부분까지 high 후  off 됨(서보모터 사용시 일반적인 pwm 파형모드)
+- balanced mode 전체 주기에 걸쳐 high된 시간이 분배됨( 그림으로 비교하면 이해하기 편함)
+
+pwmSetClock (int divisor);
+	
+	divisor : 제수(나누는 수)
+	전체주기 = divisor/19.2Mhz
+-  bcm2835PWMClockDivider에서 PWM CLOCK 19.2MHz
+
+pwmSetRange(unsigned int range);
+	
+	range : 분해능 defalut=1024
+	(divisor/19.2Mhz)*(1/range) : on되는 시간
+	
+void pwmWrite(int pin,int value);
+	pin : 출력할 핀번호
+	value : 0~1024
+- value/1024의 듀티비를 갖는 PWM 파형을 PWM레지스터에 기록함
+
+
+https://raspberrypi.stackexchange.com/questions/53854/driving-pwm-output-frequency
+
+## software pwm function
+
+- #include <softPwm.h>
+- pinMode 동일
+- 제약
+	1. To maintain a low CPU usage,the minimum pulse width is 100μS. 
+	2. That combined with the default suggested range of 100 gives a PWM frequency of 100Hz. 
+	3. If you change the pulse-width in the driver code,
+	   then be aware that at delays of less than 100μS wiringPi does it in a software loop,
+	   which means that CPU usage will rise dramatically,
+	   and controlling more than one pin will be almost impossible.
+	4. Also note that while the routines run themselves at a higher and real-time priority,
+	   Linux can still affect the accuracy of the generated signal.
+	5. There is currently no way to disable softPWM on a pin while the program in running.
+	6. You need to keep your program running to maintain the PWM output!
+- gcc -o myprog myprog.c -lwiringPi -lpthread ( pthread library를 포함 시켜야만함!) 
+
+int softPwmCreate(int pin, int initialValue, int pwmRange);
+	pin : pwm신호를 출력할 핀 번호
+	initialValue : default duty ratio
+	pwmRange : pwmRange*0.1ms 주기를 가지는 pwmRange단계의 pwm 신호를 만듬
+	return : 0 for success 
+	
+void softPwmWrite( int pin , int value);
+	pin :  pwm신호를 출력할 핀 번호
+	value : value/pwmRange=duty ratio
+			value<=pwmRange
+			
+http://wiringpi.com/reference/software-pwm-library/

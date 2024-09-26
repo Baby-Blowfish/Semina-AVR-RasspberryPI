@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main(void) {
+	int input[20] = { 0 };   //원하는 정수들을 담는 배열(최대 20개까지)
+	int i, k, least, temp=0, SIZE;
+	printf("원하는 정수를 입력하시오 : ");
+
+	    for (int i = 0; i < 20; i++) { //원하는 만큼 정수 입력 반복
+
+		    scanf("%d", &input[i]);   //정수 배열에 넣기
+			SIZE = i;                // 배열원소의 수-1
+		    if (getc(stdin) == '\n') { //엔터를 누르면 반복 종료
+		       
+			    break;
+		     }
+			
+	    }
+
+	    for (i = 0; i <= SIZE; i++) {   // 입력받은 정수 출력
+
+		    printf("%d ", input[i]);
+	    }
+	    
+	    printf("\n");
+		                  
+		for (i = 0; i < SIZE; i++)       //오름차순으로 정렬
+		{
+			least = i;
+			for (k = i + 1; k <= SIZE; k++)
+			{
+				if (input[k] < input[least])
+					least = k;
+			}
+			temp = input[i];
+			input[i] = input[least];
+			input[least] = temp;
+
+			
+		}
+		for (i = 0; i <= SIZE; i++) {    //정렬한 배열 출력
+
+			printf("%d ", input[i]);
+		}
+		printf("\n");
+		return 0;
+}

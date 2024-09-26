@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main(void) {
+	int n, current = 1, remainder, temp, count;
+
+	while (1) {                                 //50이상의 수를 입력받기 위한루프
+		printf("50이상의 수를 입력하세요 :");
+		scanf("%d", &n);
+		if (n < 50)
+			printf("다시 입력하세요!\n");
+		else if (n >= 50)
+			break;
+	}
+
+	while (current <= n) //입력받은 값까지 루프함
+	{
+		count = 0; //x의 횟수=0
+		temp = current; //현재 값(숫자 or 박수)을 임시공간에 저장
+		while (temp > 0)
+		{
+			remainder = temp % 10; //1의 자리
+			if (remainder == 3 || remainder == 6 || remainder == 9)
+				count++; //1의 자리가 3,6,9이면 x출력
+			temp /= 10; //10의 자리, 100의 자리, ... 확인
+		}
+		if (count == 0) //1의 자리가 3,6,9가 아니면
+		{
+			printf("%d ", current); //숫자값 출력
+			if (current % 10 == 0) printf("\n"); // 행마다 10열로 출력
+		}
+		else {
+			printf("x "); //x 출력
+			if (current % 10 == 0) printf("\n"); // 행마다 10열로 출력
+		}
+
+		current++; //다음 숫자 판단
+	    
+	}
+	return 0;
+}

@@ -1,0 +1,54 @@
+## IC칩의 종류
+	Through-hole mount(THM) : 삽입 실장형
+	Surface mount(SM) : 표면 실장형
+	Contact mount(CM) : 접촉 실장형
+	
+- 삽입 실장형(Through hole)
+  PCB 기판에 꽂은 후 납땜이 가능한 형태, 테스트용으로 편리
+  
+  1. DIP(Dual In-line Package) : 양쪽 아래 방향으로 Lead
+     pitch 2.54mm(100mil), mil=1/1000[inch]
+  2. SIP(Single In-line Package) : 한쪽 아래 Lead
+  3. ZIP(Zig-zag In-line Package) : 한쪽 아래 교대로 지그재그 Lead
+     pitch 1.27mm,  50mil
+  4. CPGA(Ceramics Pin Grid Array)
+      몸체의 바닥 전면,사각 배열 수직 Lead
+
+- 표면실장형(Surface Mount) 
+  SMD(Surface Mount Deivce) 표면 실장 부품
+  SMT(Surface Mount Technology) SMD를 PCB에 부착하는 기술
+  
+  1. SOP(Small Outline Package)
+     패키지 양쪽에 Lead, 끝 부분 바깥쪽으로 뺀 갈매기 날개(Gull Wing)모양
+	 pitch 1.27mm,  50mil ,lead개수 8~44
+	 TSOP(Thin SOP) - 얇은 SOP,  pitch 1.27mm이하,  50mil이하, Lead개수 8~44
+	 SSOP(Shrink SOP) - 축소 SOP,  pitch 1.27mm이하,  50mil이하 Lead개수 8~80
+	 TSSOP(Thin Shrink SOP) - pitch 1.0mm 이하, Lead개수 0.65, 0.5mm
+	 QSOP(Quarter-size SOP) - 1/4 크기의 소형 SOP, pitch 0.635mm
+	 UTSOP(Ultra Thin SOP) - pitch 0.65mm 이하
+  
+  2. SOIC(Small Outline Integrated Circuit)
+     미국 SOP
+  
+  3. QFP(Quad Flat Pack)
+     사각형 모양 Lead가 4변에 L자형 바깥으로 구부러짐, pitch 1.0/0.8/0.65/0.5/0.4/0.3mm
+	 TQFP(Thin QFP) - QFP보다 얇은 패키지, pitch 1.0~1.14mm
+	 LQFP(Low QFP) - pitch 1.4mm인 QFP
+  
+  4. QFN(Quad Flat No Lead)
+	 QFP와 비슷하고 Lead가 밑면 네변에 나열, 고밀도화 가능
+  
+  5. QFJ,PLCC(Plastic-Leaded Chip Carrier)
+     정사각형, 4방향의 Lead가 안쪽으로 구부러져 있는 'J' 자형, pitch는 1.27 mm, 50 mil 
+
+  6. SOJ(Small Outline J-leaded Package)
+     QFJ + SOP, 양쪽의 Lead가 나와 있으며 모양이 'J'자형,. Lead pitch는 1.27mm, 50mil
+	 
+  7. BGA(Ball Grid Array)
+  매트릭스 타입으로 Lead대신 뒷면에 납땜을 할 수 있는 납땜볼이 Array 형태로 나열된 패키지
+  종류에는 FBGA, PBGA 등이 있으며 QFP와 비교해보면 프린트 기판 실장에 불량률이 적고 실장도 효율적으로 할 수 있지만 보수나 교환, 수정이 어렵습니다. 
+
+- 접촉 실장형(Contact mount)
+  1. TCP(Tape Carrier Package)
+  2. COB/COG(Chip On Board/Chip On Grass)
+  
